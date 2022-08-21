@@ -1,15 +1,15 @@
 public class SalesManager {
-    protected int[] sales;
+    protected long[] sales;
 
-    public SalesManager(int[] sales) {
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    public int avg() {
-        int total = 0;
-        int max = -1;
-        int min = 100;
-        for (int sale : sales) {
+    public long avg() {
+        long total = 0;
+        long max = -1;
+        long min = 100;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
@@ -23,9 +23,9 @@ public class SalesManager {
         return (total - max - min) / (sales.length - 2);
     }
 
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
+    public long max() {
+        long max = -1;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
